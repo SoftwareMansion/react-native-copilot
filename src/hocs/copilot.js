@@ -1,8 +1,6 @@
 // @flow
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-
-import { View } from 'react-native';
 
 import mitt from 'mitt';
 import hoistStatics from 'hoist-non-react-statics';
@@ -170,7 +168,7 @@ const copilot = ({
 
       render() {
         return (
-          <View style={{ flex: 1 }}>
+          <Fragment>
             <WrappedComponent
               {...this.props}
               start={this.start}
@@ -196,7 +194,7 @@ const copilot = ({
               backdropColor={backdropColor}
               ref={(modal) => { this.modal = modal; }}
             />
-          </View>
+          </Fragment>
         );
       }
     }
